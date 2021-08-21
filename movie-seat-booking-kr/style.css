@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Noto+Sans+KR:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  background-color: #222;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.title {
+  margin: 20px 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  margin-left: 10px;
+  padding: 8px 25px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  margin: 3px;
+  width: 18px;
+  height: 15px;
+  border-radius: 10px 10px 0 0;
+  background-color: #888;
+}
+
+.seat.reserved {
+  background-color: #fff;
+}
+
+.seat.notavail {
+  background-color: #444;
+}
+
+.seat.type-disabled {
+  background-color: #50cb93;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(3) {
+  margin-left: 18px;
+}
+
+.seat:not(.reserved):not(.notavail):hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.reserved):not(.notavail):hover {
+  border: 0;
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #999;
+}
+
+.seat-descrition::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  margin: 0 15px;
+  background-color: #999;
+}
+
+.seat-descrition,
+.seat-type {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.seat-descrition li,
+.seat-type li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px 10px;
+}
+
+.screen {
+  width: 100%;
+  height: 70px;
+  margin: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  transform: rotateX(-45deg);
+}
+
+.row {
+  display: flex;
+}
+
+.information {
+  width: 400px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.info-header {
+  padding: 5px 0;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.info-body {
+  padding: 5px 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.info {
+  width: 100%;
+  text-align: left;
+}
+
+.info span {
+  float: right;
+}
+
+.to-pay {
+  width: 400px;
+  margin-top: 20px;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 2px solid #d33131;
+  background-color: #d33131;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.to-pay:hover {
+  border-color: #fff;
+}

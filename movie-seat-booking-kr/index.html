@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>보리구리 시네마 - 영화 예매</title>
+  </head>
+  <body>
+    <h1 class="title">Welcome to BORIGURI Cinema</h1>
+    <div class="movie-container">
+      <label>영화 선택:</label>
+      <select id="movie">
+        <option value="0">영화를 선택하세요</option>
+        <option class="rated-19" value="18000">더수어사이드스쿼드</option>
+        <option class="rated-15" value="15000">모가디슈</option>
+        <option class="rated-12" value="12000">싱크홀</option>
+        <option class="rated-all" value="10000">보스베이비2</option>
+        <option class="rated-12" value="12000">정글크루즈</option>
+        <option class="rated-all" value="10000">블랙핑크더무비</option>
+        <option class="rated-12" value="12000">블랙위도우</option>
+      </select>
+    </div>
+
+    <div class="showcase">
+      <ul class="seat-descrition">
+        <li>
+          <div class="seat selected"></div>
+          <small>선택</small>
+        </li>
+        <li>
+          <div class="seat reserved"></div>
+          <small>예매완료</small>
+        </li>
+        <li>
+          <div class="seat notavail"></div>
+          <small>선택불가</small>
+        </li>
+      </ul>
+
+      <ul class="seat-type">
+        <li>
+          <div class="seat"></div>
+          <small>비장애인석</small>
+        </li>
+        <li>
+          <div class="seat type-disabled"></div>
+          <small>장애인석</small>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat notavail"></div>
+        <div class="seat reserved"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat notavail"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat reserved"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+      </div>
+      <div class="row">
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat type-disabled"></div>
+        <div class="seat notavail"></div>
+        <div class="seat type-disabled"></div>
+      </div>
+    </div>
+
+    <div class="information">
+      <div class="info-header">예매 정보</div>
+      <div class="info-body clear">
+        <p class="info">영화<span id="movie-title">-</span></p>
+        <p class="info">관람 등급<span id="rated">-</span></p>
+        <p class="info">인원<span id="count">- 명</span></p>
+        <p class="info">총 금액<span id="total">- 원</span></p>
+      </div>
+    </div>
+
+    <a href="#" class="to-pay">결제하기</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
