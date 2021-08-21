@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boriguri Video player</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="player-header">
+      <div class="header__column">
+        <button class="header__btn">
+          <span class="material-icons"> menu </span>
+        </button>
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">
+            <span class="material-icons"> play_circle </span>
+            <span>Boriguri Video</span>
+          </a>
+        </div>
+      </div>
+      <div class="header__column">
+        <label for="player-search">
+          <input type="search" id="player-search" placeholder="검색" />
+          <button class="header__btn">
+            <span class="material-icons"> search </span>
+          </button>
+        </label>
+      </div>
+      <div class="header__column">
+        <button class="header__btn">
+          <span class="material-icons"> video_call </span>
+        </button>
+        <button class="header__btn">
+          <span class="material-icons"> apps </span>
+        </button>
+        <button class="header__btn">
+          <span class="material-icons"> notifications </span>
+        </button>
+        <button class="header__btn">
+          <span class="material-icons"> account_circle </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="video-screen">
+      <video
+        preload="metadata"
+        src="videos/record.mp4#t=0.5"
+        id="video"
+        class="screen"
+      ></video>
+      <div class="controls">
+        <div class="controls__controller">
+          <input
+            type="range"
+            class="controls__progress-bar"
+            id="progress-bar"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+          />
+        </div>
+        <div class="controls-btns">
+          <div class="controls__column">
+            <button class="controls__btn" id="btn__play">
+              <span class="material-icons"> play_arrow </span>
+            </button>
+            <button class="controls__btn" id="btn__stop">
+              <span class="material-icons"> stop </span>
+            </button>
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> volume_up </span>
+            </button>
+            <input
+              type="range"
+              class="controls__volume-bar"
+              id="volume-bar"
+              min="0"
+              max="100"
+              step="0.1"
+              value="50"
+            />
+            <span class="controls__timestamp" id="time-current">00:00</span>
+            <span class="controls__timestamp">/</span>
+            <span class="controls__timestamp" id="time-duration">00:00</span>
+          </div>
+          <div class="controls__column">
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> settings </span>
+            </button>
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> picture_in_picture_alt </span>
+            </button>
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> crop_16_9 </span>
+            </button>
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> cast </span>
+            </button>
+            <button class="controls__btn" id="btn__volume">
+              <span class="material-icons"> fullscreen </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
