@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보리구리 - 환율계산기</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="logo-container">
+      <img src="img/calculator.png" alt="" class="logo-container__img" />
+      <h1>환율 계산기</h1>
+    </div>
+    <h3>Exchange Rate Calculator</h3>
+    <p>Choose the currency and the amounts to get the exchange rate</p>
+
+    <div class="container">
+      <div class="currency">
+        <select id="currency__select-one">
+          <option value="AED">아랍에미리트 AED</option>
+          <option value="ARS">아르헨티나 ARS</option>
+          <option value="AUD">호주 AUD</option>
+          <option value="BGN">불가리아 BGN</option>
+          <option value="BRL">브라질 BRL</option>
+          <option value="BSD">바하마 BSD</option>
+          <option value="CAD">캐나다 CAD</option>
+          <option value="CHF">스위스 CHF</option>
+          <option value="CLP">칠레 CLP</option>
+          <option value="CNY">중국 CNY</option>
+          <option value="COP">콜롬비아 COP</option>
+          <option value="CZK">체코 CZK</option>
+          <option value="DKK">덴마크 DKK</option>
+          <option value="DOP">도미니카 DOP</option>
+          <option value="EGP">이집트 EGP</option>
+          <option value="EUR">유럽연합 EUR</option>
+          <option value="FJD">피지 FJD</option>
+          <option value="GBP">영국 GBP</option>
+          <option value="GTQ">과테말라 GTQ</option>
+          <option value="HKD">홍콩 HKD</option>
+          <option value="HRK">크로아티아 HRK</option>
+          <option value="HUF">헝가리 HUF</option>
+          <option value="IDR">인도네시아 IDR</option>
+          <option value="ILS">이스라엘 ILS</option>
+          <option value="INR">인도 INR</option>
+          <option value="ISK">아이슬란드 ISK</option>
+          <option value="JPY">일본 JPY</option>
+          <option value="KRW">대한민국 KRW</option>
+          <option value="KZT">카자흐스탄KZT</option>
+          <option value="MXN">멕시코 MXN</option>
+          <option value="MYR">말레이시아 MYR</option>
+          <option value="NOK">노르웨이 NOK</option>
+          <option value="NZD">뉴질랜드 NZD</option>
+          <option value="PAB">파나마 PAB</option>
+          <option value="PEN">페루 PEN</option>
+          <option value="PHP">필리핀 PHP</option>
+          <option value="PKR">파키스탄 PKR</option>
+          <option value="PLN">폴란드 PLN</option>
+          <option value="PYG">파라과이 PYG</option>
+          <option value="RON">루마니아 RON</option>
+          <option value="RUB">러시아 RUB</option>
+          <option value="SAR">사우디아라비아 SAR</option>
+          <option value="SEK">스웨덴 SEK</option>
+          <option value="SGD">싱가포르 SGD</option>
+          <option value="THB">태국 THB</option>
+          <option value="TRY">터키 TRY</option>
+          <option value="TWD">대만 TWD</option>
+          <option value="UAH">우크라이나 UAH</option>
+          <option value="USD" selected>미국 USD</option>
+          <option value="UYU">우루과이 UYU</option>
+          <option value="VND">베트남 VND</option>
+          <option value="ZAR">남아프리카 공화국 ZAR</option>
+        </select>
+        <input
+          type="number"
+          id="currency__amount-one"
+          placeholder="0"
+          value="1"
+        />
+      </div>
+
+      <div class="swap-rate-container">
+        <button id="swap" class="swap-rate-container__btn">Swap</button>
+        <div id="rate" class="swap-rate-container__rate"></div>
+      </div>
+
+      <div class="currency">
+        <select id="currency__select-two">
+          <option value="AED">아랍에미리트 AED</option>
+          <option value="ARS">아르헨티나 ARS</option>
+          <option value="AUD">호주 AUD</option>
+          <option value="BGN">불가리아 BGN</option>
+          <option value="BRL">브라질 BRL</option>
+          <option value="BSD">바하마 BSD</option>
+          <option value="CAD">캐나다 CAD</option>
+          <option value="CHF">스위스 CHF</option>
+          <option value="CLP">칠레 CLP</option>
+          <option value="CNY">중국 CNY</option>
+          <option value="COP">콜롬비아 COP</option>
+          <option value="CZK">체코 CZK</option>
+          <option value="DKK">덴마크 DKK</option>
+          <option value="DOP">도미니카 DOP</option>
+          <option value="EGP">이집트 EGP</option>
+          <option value="EUR">유럽연합 EUR</option>
+          <option value="FJD">피지 FJD</option>
+          <option value="GBP">영국 GBP</option>
+          <option value="GTQ">과테말라 GTQ</option>
+          <option value="HKD">홍콩 HKD</option>
+          <option value="HRK">크로아티아 HRK</option>
+          <option value="HUF">헝가리 HUF</option>
+          <option value="IDR">인도네시아 IDR</option>
+          <option value="ILS">이스라엘 ILS</option>
+          <option value="INR">인도 INR</option>
+          <option value="ISK">아이슬란드 ISK</option>
+          <option value="JPY">일본 JPY</option>
+          <option value="KRW" selected>대한민국 KRW</option>
+          <option value="KZT">카자흐스탄KZT</option>
+          <option value="MXN">멕시코 MXN</option>
+          <option value="MYR">말레이시아 MYR</option>
+          <option value="NOK">노르웨이 NOK</option>
+          <option value="NZD">뉴질랜드 NZD</option>
+          <option value="PAB">파나마 PAB</option>
+          <option value="PEN">페루 PEN</option>
+          <option value="PHP">필리핀 PHP</option>
+          <option value="PKR">파키스탄 PKR</option>
+          <option value="PLN">폴란드 PLN</option>
+          <option value="PYG">파라과이 PYG</option>
+          <option value="RON">루마니아 RON</option>
+          <option value="RUB">러시아 RUB</option>
+          <option value="SAR">사우디아라비아 SAR</option>
+          <option value="SEK">스웨덴 SEK</option>
+          <option value="SGD">싱가포르 SGD</option>
+          <option value="THB">태국 THB</option>
+          <option value="TRY">터키 TRY</option>
+          <option value="TWD">대만 TWD</option>
+          <option value="UAH">우크라이나 UAH</option>
+          <option value="USD">미국 USD</option>
+          <option value="UYU">우루과이 UYU</option>
+          <option value="VND">베트남 VND</option>
+          <option value="ZAR">남아프리카 공화국 ZAR</option>
+        </select>
+        <input type="number" id="currency__amount-two" placeholder="0" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
