@@ -49,7 +49,7 @@ function sortRichest() {
   updateDOM();
 }
 
-//
+// Calculate the total wealth
 function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
 

@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@300&display=swap");
+
+:root {
+  --primary-color: #314e52;
+  --secondary-color: #f2a154;
+  --background-color: #f7f6e7;
+  --point-font-family: "Questrial", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: var(--point-font-family);
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Roboto", sans-serif;
+  transition: transform 0.2s;
+}
+
+body.show-nav {
+  /* Width of nav */
+  transform: translateX(250px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 250px;
+  border-right: 1px solid var(--background-color);
+  background-color: var(--primary-color);
+  transform: translateX(-100%);
+}
+
+.nav__logo {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.nav__logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.nav__menu li {
+  margin: 10px;
+}
+
+.nav__menu li a {
+  display: block;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-family: var(--point-font-family);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.nav__menu li a:hover {
+  border-radius: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding: 20px 0;
+  background-color: var(--primary-color);
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  vertical-align: middle;
+}
+
+.header h1,
+.header p {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.header h1 {
+  padding: 10px 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cta-btn {
+  padding: 10px 10px 10px 20px;
+  border: 0;
+  border-radius: 30px 0 0 30px;
+  background-color: #f7f6e7;
+  color: var(--primary-color);
+  font-family: var(--point-font-family);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sign-up-btn:hover {
+  padding-right: 40px;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+  max-width: 100%;
+}
+
+.main__title {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 0 40px 40px 0;
+  background-color: var(--secondary-color);
+}
+
+.main p {
+  margin-bottom: 10px;
+  line-height: 23px;
+}
+
+.main ul li {
+  margin-bottom: 5px;
+  list-style: circle inside;
+}
+
+.modal-comtainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-comtainer.show-modal {
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #e7e6e1;
+  animation: showModal 1s;
+}
+
+.modal-header {
+  padding: 15px;
+  border: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content {
+  border: 8px solid var(--primary-color);
+  border-top: 0;
+}
+
+.modal-form {
+  padding: 15px;
+}
+
+.modal-form__box {
+  margin-bottom: 15px;
+}
+
+.modal-form__box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-form__input {
+  padding: 10px;
+  width: 100%;
+  border: 0;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  font-family: var(--point-font-family);
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes showModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
