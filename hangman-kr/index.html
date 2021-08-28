@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보리구리 - Hangman Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1 class="title">Hangman Game</h1>
+    <p>Find the hidden word - Enter a letter</p>
+
+    <div class="game-container">
+      <svg class="figure-container" width="320" height="370">
+        <line x1="50" y1="10" x2="160" y2="10"></line>
+        <line x1="160" y1="10" x2="160" y2="60"></line>
+        <line x1="50" y1="10" x2="50" y2="360"></line>
+        <line x1="50" y1="50" x2="90" y2="10"></line>
+        <line x1="10" y1="360" x2="310" y2="360"></line>
+
+        <!-- Head -->
+        <circle cx="160" cy="80" r="20" class="figure-part"></circle>
+        <!-- Body -->
+        <line x1="160" y1="100" x2="160" y2="180" class="figure-part"></line>
+        <!-- Arms -->
+        <line x1="160" y1="110" x2="120" y2="150" class="figure-part"></line>
+        <line x1="160" y1="110" x2="200" y2="150" class="figure-part"></line>
+        <!-- Legs -->
+        <line x1="160" y1="180" x2="130" y2="260" class="figure-part"></line>
+        <line x1="160" y1="180" x2="190" y2="260" class="figure-part"></line>
+      </svg>
+
+      <div class="wrong-letters-container" id="wrong-letters-container">
+        <!-- <h2>Wrong :</h2>
+        <span>e, r, d, a</span> -->
+      </div>
+
+      <div class="word" id="word">
+        <!-- <span class="letter">h</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">l</span>
+        <span class="letter">o</span> -->
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container" id="notification-container">
+      <p>You already have this letter.</p>
+    </div>
+
+    <!-- Container for final message -->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-msg">You Won!</h2>
+        <h2 id="final-msg-reveal-word"></h2>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
