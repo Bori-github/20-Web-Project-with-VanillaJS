@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보리구리 - 레시피 파인더</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Recipe Finder</h1>
+      <div class="flex">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            placeholder="Serch for recipe or keywords"
+            required
+          />
+          <button type="submit" class="search-btn">
+            <span class="material-icons-outlined"> search </span>
+          </button>
+        </form>
+        <button class="random-btn" id="random">
+          <span class="material-icons-outlined"> find_replace </span>
+        </button>
+      </div>
+    </header>
+
+    <div class="container" id="container">
+      <div id="result-heading"></div>
+      <div class="meals" id="meals"></div>
+      <div id="singel-meal"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
