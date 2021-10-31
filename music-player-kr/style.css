@@ -27,8 +27,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin: 50px 0;
+  margin: 40px auto;
 }
 
 .music-info {
@@ -36,6 +35,9 @@ h1 {
   padding: 20px 20px 20px 150px;
   border-radius: 20px 20px 0 0;
   background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.2s linear;
 }
 
 .music-info h4 {
@@ -48,9 +50,11 @@ h1 {
   margin: 8px 0;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .progress {
+  position: relative;
   width: 0%;
   height: 100%;
   border-radius: 5px;
@@ -61,6 +65,7 @@ h1 {
 .timestamp-container {
   position: relative;
   padding-bottom: 10px;
+  color: rgba(28, 146, 210, 0.8);
   font-size: 14px;
 }
 
@@ -100,6 +105,7 @@ h1 {
   left: 50%;
   width: 20px;
   height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   background-color: #fff;
   transform: translate(-50%, 50%);
@@ -108,6 +114,7 @@ h1 {
 .img-container img {
   width: inherit;
   height: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   object-fit: cover;
   animation: rotate 3s linear infinite;
