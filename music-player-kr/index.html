@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>보리구리 - 뮤직 플레이어</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Boriguri Music Player</h1>
+
+    <div class="container">
+      <div class="music-info">
+        <h4 id="title">ukulele</h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="timestamp-container">
+          <span class="timestamp" id="time-current">00:00</span>
+          <span class="timestamp" id="time-duration">00:00</span>
+        </div>
+      </div>
+
+      <div class="music-container" id="music-container">
+        <audio src="music/ukulele.mp3" id="audio"></audio>
+
+        <div class="img-container">
+          <img src="image/ukulele.jpg" alt="music-cover" id="cover" />
+        </div>
+
+        <div class="control-container">
+          <button class="action-btn" id="prev">
+            <span class="material-icons-round"> skip_previous </span>
+          </button>
+          <button class="action-btn action-btn-big" id="play">
+            <span class="material-icons-round"> play_arrow </span>
+          </button>
+          <button class="action-btn" id="next">
+            <span class="material-icons-round"> skip_next </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
