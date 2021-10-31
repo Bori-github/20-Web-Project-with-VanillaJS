@@ -147,5 +147,3 @@ progressContainer.addEventListener("click", setProgress);
 
 // Song ends
 audio.addEventListener("ended", nextSong);
-
-// Time of song
